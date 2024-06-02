@@ -13,14 +13,12 @@ st.set_page_config(
     initial_sidebar_state="expanded",
     menu_items={"About": "Developed and Maintained by **SantaMonica @ MolochTH**"},
 )
-st.logo(image=r"images\grandmaster_1.webp",icon_image=r"images\grandmaster_1.webp")
+st.logo(image=r"images/grandmaster_1.webp",icon_image=r"images/grandmaster_1.webp")
 
 st.sidebar.image(
     r"images\molochth_logo.jpeg", use_column_width=True, output_format="PNG"
 )
 # st.sidebar.header("Raw Data")
-
-
 
 @st.cache_data
 def load_data() -> pd.DataFrame:

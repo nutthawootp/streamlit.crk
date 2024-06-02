@@ -11,7 +11,7 @@ import streamlit.components.v1 as components
 # -- Set page config
 apptitle = 'Cookie Run Kingdom: Guild Leaderboard'
 st.set_page_config(page_title=apptitle
-                    , page_icon=r"images\grandmaster_1.webp"
+                    , page_icon=r"images\grandmaster_1.png"
                     , layout="wide"
                     ,initial_sidebar_state="expanded"
                     ,menu_items={                        
@@ -33,7 +33,7 @@ st.divider()  # 👈 Another horizontal rule
 st.markdown("""
 ### Description
 
-This is a leaderboard of the top 10 guilds in Dark Cacao.
+This app provide the information of the top 10 guilds in the Dark Cacao server.
 
 **Note:** More information will be addd soon.
 

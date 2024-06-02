@@ -116,41 +116,4 @@ st.plotly_chart(fig, theme="streamlit", use_container_width=True)
 st.divider()
 
 
-fig2 = go.Figure()
 
-
-for guild, dat in data[data.GuildName.isin(top10_recent)].groupby("GuildNameExtra"):
-    growth_rates_percentage = dat["GrowthRate"]
-    fig2.add_trace(
-        go.Waterfall(
-            orientation="v",
-            x=dat["Round"],
-            y=growth_rates_percentage,
-            name=guild,
-            # text=f"{guild}",
-            decreasing=dict(marker=dict(color="red")),
-            increasing=dict(marker=dict(color="green")),
-        )
-    )
-
-fig2.update_layout(
-    title="Waterfall Chart for Growth Rate over Time",
-    xaxis_title="Round",
-    yaxis_title="Growth Rate (%)",
-    # autosize=False,
-    # width=800,
-    height=900,
-# yaxis=dict(type="log"),  # Set the y-axis type to logarithmic
-    legend=dict(
-    # x=0,
-    # y=1,
-    # traceorder="reversed",
-    title = "Guild",
-    font=dict(family="Arial", size=15),
-    bgcolor=None,
-    bordercolor=None,
-    borderwidth=0,
-),
-)
-
-st.plotly_chart(fig2, theme="streamlit", use_container_width=True)

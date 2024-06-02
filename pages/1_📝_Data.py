@@ -1,7 +1,8 @@
 import streamlit as st
 import pandas as pd
 from pandas.io.formats.style import Styler
-
+# import pandas_profiling 
+# from streamlit_pandas_profiling import st_profile_report
 from streamlit_extras.dataframe_explorer import dataframe_explorer
 from streamlit_extras.stoggle import stoggle
 
@@ -97,6 +98,8 @@ data = load_data()
 # -- Main
 st.title("📝 Data")
 st.divider()  # 👈horizontal rule
+
+
 st.subheader(
     ":blue[Data Dictionary]",
 )
@@ -147,6 +150,15 @@ with tab3:
     st.dataframe(dataframe_explorer(df=data,case=False,))  
 
 
+st.divider()
+
 # stoggle(summary="📑 More info", content=)
 
+# st.subheader(
+    # ":blue[Exploratory Data Analysis]",
+# )
+
+# report = data.profile_report() # type: ignore
+
+# st_profile_report(report)
 

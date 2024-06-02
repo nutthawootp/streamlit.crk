@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "crk-guild-carkcacao"
+version = "0.1.0"
+description = "App provide information of the Cookie Run Kingdom: Guild Leaderboard of Dark Cacao server."
+authors = ["SantaMonica"]
+readme = "README.md"
+package-mode = false
+
+
+
+[tool.poetry.dependencies]
+python = "^3.11"
+pandas = "^2.2.2"
+streamlit = "^1.35.0"
+black = "^24.4.2"
+streamlit-extras = "^0.4.3"
+plotly = "^5.22.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

@@ -26,19 +26,39 @@ st.sidebar.image(r'images/molochth_logo.jpeg',use_column_width=True)
         
         
 # -- Main        
-st.title('🏰Cookie Run Kingdom:')
-st.subheader('Guild Leaderboard in Dark Cacao server')
+st.title(body=':orange[Cookie Run: Kingdom]🏰')
+st.subheader('The Top Guilds in Dark Cacao server')
+
 st.divider()  # 👈 Another horizontal rule
 
+st.markdown(body="""
+
+:orange[Cookie Run: Kingdom] is a free-to-play RPG and city builder hybrid by [Devsisters](https://devsisters.com). Players build their Cookie Kingdom, collect Cookies, and engage in battles across various game modes. The game was released worldwide on Android and iOS in January 2021, with a PC release on Google Play Games in July 2023.
+""")
+st.image(r'images/guildbosspage.png',use_column_width=True)
+
 st.markdown("""
-### Description
+#### :violet[Guild Battle]⚔️
 
-This app provide the information of the top 10 guilds in the Dark Cacao server.
+Guild Battle is a permanent, seasonal game mode, consists of three individual bosses: :red[Red Velvet Dragon], :violet[Avatar of Destiny], and :green[Living Abyss]. Each boss has individual skills, strengths and weaknesses, and strategies needed to defeat them. Damage inflicted on any of the bosses is shared between all 30 guild members, allowing all members to contribute towards the same goals and rewards.
 
-**Note:** More information will be addd soon.
+#### :violet[Seasons & Rounds]📅
 
+Each Guild Battle season consist of 4 rounds, one per week, for a total of 24 playable days and 4 tallying days. Players can fight each boss a maximum of 9 times per round. Guilds as a whole can fight a maximum of 540 battles per round.
 
+#### :violet[Guild Trophies]🏆
 
+Guild Trophies are used in determining a guild's overall ranking. Guild Trophies are obtained by participating in Guild Battle and defeating bosses. The amount of trophies earned depends on the boss level and the damage inflicted by guild members during battles.
+
+#### :violet[Ranking Calculation]🥇
+
+The total number of Guild Trophies accumulated by all guild members contributes to the guild's overall ranking. Guilds are ranked based on their cumulative trophies across all rounds of the season.
+
+#### :violet[Rewards]🎁
+
+After each tallying day, guilds receive rewards based on their ranking.
+Higher-ranked guilds receive better rewards, which can include in-game items, currency, or other bonuses.
+Remember, active participation and effective teamwork are essential for earning more Guild Trophies and climbing the ranks! 🏆.
 """  
 )
 

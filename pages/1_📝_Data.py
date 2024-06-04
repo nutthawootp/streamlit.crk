@@ -153,11 +153,11 @@ st.divider()
 
 # stoggle(summary="📑 More info", content=)
 
-# st.subheader(
-    # ":blue[Exploratory Data Analysis]",
-# )
+st.subheader(
+    ":blue[Exploratory Data Analysis]",
+)
 
-# report = data.profile_report() # type: ignore
+from st_aggrid import AgGrid
 
-# st_profile_report(report)
+AgGrid(data)
 

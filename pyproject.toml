@@ -17,6 +17,7 @@ streamlit-extras = "^0.4.3"
 plotly = "^5.22.0"
 streamlit-pandas-profiling = "^0.1.3"
 opencv-python = "^4.9.0.80"
+streamlit-aggrid = "^1.0.5"
 
 
 [build-system]

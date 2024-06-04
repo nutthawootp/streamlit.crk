@@ -18,7 +18,7 @@ st.sidebar.image(
 )
 
 # -- Main        
-st.title('🥇Guild Leaderboard')
+st.title('🥇Dark Cacao server Leaderboard')
 
 st.divider()  # 👈horizontal rule
 
@@ -29,15 +29,21 @@ tableau_embed_code = """
 components.html(tableau_embed_code, height=900, scrolling=True)
 
 st.write("""
-# Description
+The leaderboard of provide information of the top 10 guilds in Dark Cacao server, consists of the following columns: 
 
-This is a leaderboard of the top 10 guilds in Dark Cacao.
+- **Rank:** The position of each guild in the leaderboard, based on their cumulative trophies across all rounds of the season.
 
-Compare - The difference of total trophies(Season) between the MolochTH and the other guilds.
+- **Guild:** The names of the different competitive teams or guilds.
 
-**Note:** More information will be addd soon.
+- **Rank (Round):** The ranking based on the number of trophies earned in the current round.
 
+- **Trophies (Round):** The number of trophies earned this round by each guild.
 
+- **Trophies (Season):** The number of cumulative trophies within the season.
+
+- **Improvement:** Indicates how much each guild's performance improved or declined compared to the previous roounds.
+
+- **Compare:** The difference of total trophies(Season) between the MolochTH and the other guilds.
 
 """  
 )    

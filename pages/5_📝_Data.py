@@ -10,10 +10,10 @@ st.set_page_config(
     page_title="Data",
     page_icon="📝",
     layout="wide",
-    initial_sidebar_state="expanded",
+    initial_sidebar_state="auto",
     menu_items={"About": "Developed and Maintained by **SantaMonica @ MolochTH**"},
 )
-st.logo(image=r"images/grandmaster_1.webp",icon_image=r"images/grandmaster_1.webp")
+st.logo(image=r"images/grandmaster_1.png",icon_image=r"images/grandmaster_1.png")
 
 st.sidebar.image(
     r"images/molochth_logo.jpeg", use_column_width=True, output_format="PNG"
@@ -94,15 +94,6 @@ def style_df(df: pd.DataFrame) -> Styler:
 
 data = load_data()
 
-# -- Main
-st.title("📝 Data")
-st.divider()  # 👈horizontal rule
-
-
-st.subheader(
-    ":blue[Data Dictionary]",
-)
-
 dict_content = f"""
 
 The dataset contains {data.shape[1]} columns and {data.shape[0]} rows:
@@ -126,8 +117,13 @@ The dataset contains {data.shape[1]} columns and {data.shape[0]} rows:
 
 
 """
+# -- Main
+st.title(body=':orange[Cookie Run: Kingdom]🏰')
+st.subheader("📝 Data")
+st.divider()  # 👈horizontal rule
 
-st.markdown(dict_content)
+with st.expander(":blue[Data Dictionary]"):
+    st.markdown(dict_content)
 
 st.divider()
 
@@ -137,27 +133,22 @@ st.subheader(
 
 st.write('Choose the tab to view the raw data in different formats.')
 
-tab1, tab2, tab3 = st.tabs(["Raw", "Styler", "Explorer"])
-
-with tab1:
-    st.dataframe(data)
+tab1, tab2 = st.tabs([ "Formatted","Raw"])
 
 with tab2:
+    st.dataframe(data)
+
+with tab1:
     st.dataframe(style_df(data))
 
-with tab3:
-    st.dataframe(dataframe_explorer(df=data,case=False,))  
 
 
 st.divider()
 
 # stoggle(summary="📑 More info", content=)
 
-st.subheader(
-    ":blue[Exploratory Data Analysis]",
-)
+# st.subheader(
+#     ":blue[Exploratory Data Analysis]",
+# )
 
-from st_aggrid import AgGrid
-
-AgGrid(data)
 

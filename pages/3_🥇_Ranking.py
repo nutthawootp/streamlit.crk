@@ -4,6 +4,7 @@ import plotly.express as px
 import plotly.graph_objects as go
 from streamlit_extras.stoggle import stoggle
 
+
 st.set_page_config(
     page_title="Ranking", 
     page_icon="🥇",
@@ -33,7 +34,7 @@ def load_data() -> pd.DataFrame:
     return data
 
 
-def rankchart(data=pd.DataFrame) -> go.Figure:
+def rankchart(data:pd.DataFrame) -> go.Figure:
     
     if 'Date' in data.columns:
         max_date = str(data.Date.max()).split(" ")[0]

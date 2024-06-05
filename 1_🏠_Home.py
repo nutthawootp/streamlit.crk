@@ -33,7 +33,7 @@ def cs_body():
     st.markdown("""
     Welcome! 👋
 
-This is a demo app showcasing the top guilds in the Cookie Run: Kingdom's dark cacao server. The data is manually collected from the game interface. This app is intentionally created for use within the guild, MolochTH, but it can be shared and used by anyone. 
+This is a demo app showcasing the guild boss battle performance the top guilds in the Cookie Run: Kingdom's dark cacao server. The data is manually collected from the game interface weekly. This app is intentionally developed for the guild, `MolochTH`, to use internally. However, if you find this useful or might be of interest to someone you know, it can be shared and used by anyone.
 
 👈 Check them out by browsing the pages in the sidebar!
                 """)

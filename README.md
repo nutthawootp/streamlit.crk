@@ -1,60 +1,51 @@
 
 ---
+
 <div align="center">
-    <div id="user-content-toc">
-        <ul>
-            <summary>
-                <h2>Guild Battle Leaderboard
-                <br>Cookie Run: Kingdom (Dark Cacao Server)</h2>
-            </summary>
-        </ul>
-        <div align="center">
-            <a href="https://guildcrk.streamlit.app/"><img src="https://static.streamlit.io/badges/streamlit_badge_black_white.svg"/></a>
-            <img src="https://img.shields.io/github/stars/nutthawootp/streamlit.crk?color=blue&style=social"/>
-        </div>
-    </div>
+
+🎮 **Welcome to the Ultimate Guild Battle Leaderboard!** 🏰
+
+🍪 **Cookie Run: Kingdom (Dark Cacao Server)** 🍪
+
 </div>
+<div align="center">
+    <a href="https://guildcrk.streamlit.app/"><img src="https://static.streamlit.io/badges/streamlit_badge_black_white.svg"/></a>
+    <img src="https://img.shields.io/github/stars/nutthawootp/streamlit.crk?color=blue&style=social"/>
+</div>
+---
 
-### **Key Features**
+### 🌟 **Key Features** 🌟
 
-- **Weekly  Data Update**: The leaderboard is updated weekly with data manually collected from the game.
+- **Weekly Fun Updates**: We keep the leaderboard as fresh as cookies out of the oven, updating it every week with the latest game data. 🍪📅
 
-- **Guild  Performance Tracking**: It highlights the guild boss battle performances of the top guilds in the server.
+- **Guild Performance Party**: Check out how the top guilds are throwing down in boss battles! It's like a dance-off, but with more swords and magic. ⚔️✨
 
-- **User-Friendly  Interface**: Users can browse through the guild performances using the sidebar navigation.
+- **Easy-Peasy Navigation**: Our sidebar is like a treasure map, guiding you through the performances with ease. 🗺️👀
 
-### **Use Cases**
+### 🚀 **Use Cases** 🚀
 
-- **For  Guild Members**: Members of the **MolochTH** guild can track thw performance and improvements over time of their own guild as well as the other guilds in the leaderboard.
+- **Guild Members' Delight**: If you're part of the **MolochTH** guild, this is your backstage pass to watch your guild's rise to stardom! 🌟📈
 
-- **For  Other Players**: While intended for internal use, the leaderboard can be shared with others who might find the data useful for competitive insights.
+- **Spy Gear for Players**: Not in the guild? No worries! Sneak a peek at the leaderboard for some top-secret competitive insights. 🕵️‍♂️🔍
 
-### Try out and explore this app in your local
+### 🎉 **Get Started** 🎉
 
-1. Clone the repository:
+1. Join the adventure:
 
 ```
 git clone https://github.com/nutthawootp/streamlit.crk.git
 ```
 
-2. Install the required dependencies:
+2. Gather your tools:
 
 ```
 pip install -r requirements.txt
 ```
 
-3. Go to the `streamlit.crk` folder:
+3. Launch the magic portal:
 
 ```
-cd streamlit.crk/
+streamlit run app.py
 ```
 
-3. Run the app:
-
-```
-streamlit run streamlit.crk.py
-```
-
-4. Access the app in your browser at <http://localhost:8501>
-
-------
+---

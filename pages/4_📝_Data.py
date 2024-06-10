@@ -14,11 +14,18 @@ st.set_page_config(
     menu_items={"About": "Developed and Maintained by **SantaMonica @ MolochTH**"},
 )
 st.logo(image=r"images/grandmaster_1.png",icon_image=r"images/grandmaster_1.png")
+def main():
+    cs_sidebar()
+    cs_body()
+    return None
 
-st.sidebar.image(
-    r"images/molochth_logo.jpeg", use_column_width=True, output_format="PNG"
-)
-# st.sidebar.header("Raw Data")
+# -- Sidebar
+def cs_sidebar(): 
+    # st.sidebar.header('Developed and Maintained by **SantaMonica @ MolochTH**')
+    st.sidebar.image(r'images/molochth_logo_15transparent.png',use_column_width=True,width=244)
+
+
+
 
 @st.cache_data
 def load_data() -> pd.DataFrame:
@@ -91,64 +98,65 @@ def style_df(df: pd.DataFrame) -> Styler:
 
 
 
+def cs_body():
 
-data = load_data()
+    data = load_data()
 
-dict_content = f"""
+    dict_content = f"""
 
-The dataset contains {data.shape[1]} columns and {data.shape[0]} rows:
+    The dataset contains {data.shape[1]} columns and {data.shape[0]} rows:
 
-| Column Name       | Data Type | Description                                                                 |
-|-------------------|-----------|-----------------------------------------------------------------------------|
-| `Date`            | Date      | The date when the data was recorded, in YYYY-MM-DD format.                   |
-| `Season`          | Integer   | The season number.                                                           |
-| `Round`           | String    | The round within the season, formatted as 'X-Y', where X is the Season and Y is the Round. |
-| `GuildName`       | String    | The name of the guild.                                                      |
-| `GuildNameExtra`  | String    | Additional information or alias for the non-English guild name.                         |
-| `Trophies`        | Integer   | The number of trophies the guild has earned in the current round.            |
-| `SeasonTotal`     | Integer   | The running total of trophies the guild has earned in the current season.     |
-| `RoundRank`       | Integer   | The rank of the guild in the current round based on the number of trophies in the current round.  |
-| `DiffRoundRank`   | Integer   | The change in the guild's rank compared to the previous round.               |
-| `SeasonRank`      | Integer   | The overall rank of the guild in the current round based on the number of total trophies.  |
-| `DiffSeasonRank`  | Integer   | The change in the guild's overall rank compared to the previous round.              |
-| `Improvement`     | Integer   | The improvement of the guild's trophies earned in the current round.compared to the previous round.  |
-| `GrowthRate`      | Float     | The growth rate of the guild's performance (in term of trophies).                                  |
+    | Column Name       | Data Type | Description                                                                 |
+    |-------------------|-----------|-----------------------------------------------------------------------------|
+    | `Date`            | Date      | The date when the data was recorded, in YYYY-MM-DD format.                   |
+    | `Season`          | Integer   | The season number.                                                           |
+    | `Round`           | String    | The round within the season, formatted as 'X-Y', where X is the Season and Y is the Round. |
+    | `GuildName`       | String    | The name of the guild.                                                      |
+    | `GuildNameExtra`  | String    | Additional information or alias for the non-English guild name.                         |
+    | `Trophies`        | Integer   | The number of trophies the guild has earned in the current round.            |
+    | `SeasonTotal`     | Integer   | The running total of trophies the guild has earned in the current season.     |
+    | `RoundRank`       | Integer   | The rank of the guild in the current round based on the number of trophies in the current round.  |
+    | `DiffRoundRank`   | Integer   | The change in the guild's rank compared to the previous round.               |
+    | `SeasonRank`      | Integer   | The overall rank of the guild in the current round based on the number of total trophies.  |
+    | `DiffSeasonRank`  | Integer   | The change in the guild's overall rank compared to the previous round.              |
+    | `Improvement`     | Integer   | The improvement of the guild's trophies earned in the current round.compared to the previous round.  |
+    | `GrowthRate`      | Float     | The growth rate of the guild's performance (in term of trophies).                                  |
 
-
-
-"""
-# -- Main
-st.title(body=':orange[Cookie Run: Kingdom]🏰')
-st.subheader("📝 Data")
-st.divider()  # 👈horizontal rule
-
-with st.expander(":blue[Data Dictionary]"):
-    st.markdown(dict_content)
-
-st.divider()
-
-st.subheader(
-    ":blue[View Data]",
-)
-
-st.write('Choose the tab to view the raw data in different formats.')
-
-tab1, tab2 = st.tabs([ "Formatted","Raw"])
-
-with tab2:
-    st.dataframe(data)
-
-with tab1:
-    st.dataframe(style_df(data))
+    """
+    
+    # -- body
+    st.title(body=':orange[Cookie Run: Kingdom]🏰')
+    st.subheader("📝 Dataset", divider='gray')
 
 
+    with st.expander(":blue[Data Dictionary]"):
+        st.markdown(dict_content)
 
-st.divider()
+    st.divider()
+
+    st.subheader(
+        ":blue[View Data]",divider='gray'
+    )
+
+    st.write('Choose the tab to view the raw data in different formats.')
+
+    tab1, tab2 = st.tabs([ "Formatted","Raw"])
+
+    with tab2:
+        st.dataframe(data)
+
+    with tab1:
+        st.dataframe(style_df(data))
+
+
+
+    st.divider()
 
 # stoggle(summary="📑 More info", content=)
 
 # st.subheader(
 #     ":blue[Exploratory Data Analysis]",
 # )
-
+if __name__ == "__main__":
+    main()
 

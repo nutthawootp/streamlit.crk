@@ -25,7 +25,7 @@ def main():
 # -- Sidebar
 def cs_sidebar() -> None: 
     # st.sidebar.header('Developed and Maintained by **SantaMonica @ MolochTH**')
-    st.sidebar.image(r'images/molochth_logo.jpeg',use_column_width=True,width=244)
+    st.sidebar.image(r'images/molochth_logo_15transparent.png',use_column_width=True,width=244)
     return None
 
 # -- Body
@@ -39,7 +39,7 @@ def cs_body() -> None:
         csv_data_path = 'https://raw.githubusercontent.com/nutthawootp/CRK_guild_boss/main/data/CRK_guild_boss.csv'
         data = pd.read_csv(csv_data_path)
         return data
-       
+    
     data=load_data()
     
     top10_recent = data[
@@ -57,7 +57,7 @@ def cs_body() -> None:
         y="Trophies",
         color="GuildNameExtra",
         color_discrete_sequence=px.colors.qualitative.G10_r,
-        markers=False,
+        markers=True,
         hover_data={
             "GuildNameExtra": False,
             "SeasonRank": ":,.0f",
@@ -80,7 +80,7 @@ def cs_body() -> None:
         legend=dict(
             # x=0,
             # y=1,
-            # traceorder="reversed",
+            orientation='h',
             title = "Guild",
             font=dict(family="Arial", size=15),
             bgcolor=None,
@@ -115,19 +115,19 @@ def cs_body() -> None:
                 )
             )
         annotations = []
-        annotations.append(
-            dict(
-                text=f"Created by: SantaMonica @ MolochTH<br>Last update: {max_date}",
-                xref="paper",
-                yref="paper",
-                x=1.16,
-                y=-0.05,
-                xanchor="right",
-                yanchor="top",
-                font=dict(family="Arial", size=12, color="rgb(150,150,150)"),
-                showarrow=False,
-            )
-        )    
+        # annotations.append(
+        #     dict(
+        #         text=f"Created by: SantaMonica @ MolochTH<br>Last update: {max_date}",
+        #         xref="paper",
+        #         yref="paper",
+        #         x=1.16,
+        #         y=-0.05,
+        #         xanchor="right",
+        #         yanchor="top",
+        #         font=dict(family="Arial", size=12, color="rgb(150,150,150)"),
+        #         showarrow=False,
+        #     )
+        # )    
 
         fig2.update_layout(
             title="Waterfall Chart of Round over Round Trophies Growth Rate over Time",
@@ -142,7 +142,7 @@ def cs_body() -> None:
             legend=dict(
             # x=0,
             # y=1,
-            # traceorder="reversed",
+            orientation = 'h',
             title = "Guild",
             font=dict(family="Arial", size=15),
             bgcolor=None,

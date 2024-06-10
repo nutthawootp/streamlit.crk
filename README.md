@@ -12,6 +12,7 @@
     <a href="https://guildcrk.streamlit.app/"><img src="https://static.streamlit.io/badges/streamlit_badge_black_white.svg"/></a>
     <img src="https://img.shields.io/github/stars/nutthawootp/streamlit.crk?color=blue&style=social"/>
 </div>
+
 ---
 
 ### 🌟 **Key Features** 🌟

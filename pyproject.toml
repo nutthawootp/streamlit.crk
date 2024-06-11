@@ -1,7 +1,7 @@
 [tool.poetry]
-name = "crk-guild-carkcacao"
+name = "crk-guild-darkcacao"
 version = "0.1.0"
-description = "App provide information of the Cookie Run Kingdom: Guild Leaderboard of Dark Cacao server."
+description = "Streamlit App to provide information of the Guild Battle Leaderboard: Cookie Run Kingdom's Dark Cacao server."
 authors = ["SantaMonica"]
 readme = "README.md"
 package-mode = false
@@ -11,10 +11,9 @@ package-mode = false
 [tool.poetry.dependencies]
 python = "^3.11"
 pandas = "^2.2.2"
+plotly = "^5.22.0"
 streamlit = "^1.35.0"
 streamlit-extras = "^0.4.3"
-plotly = "^5.22.0"
-opencv-python = "^4.9.0.80"
 streamlit-aggrid = "^1.0.5"
 
 

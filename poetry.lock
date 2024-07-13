@@ -2439,6 +2439,21 @@ jinja2 = "*"
 streamlit = ">=1.2"
 
 [[package]]
+name = "streamlit-navigation-bar"
+version = "3.3.0"
+description = "A component that allows you to place a navigation bar in your Streamlit app."
+optional = false
+python-versions = ">=3.8"
+files = [
+    {file = "streamlit-navigation-bar-3.3.0.tar.gz", hash = "sha256:f458c3f9bbb72a3fa07a28c1db98eceabdd49b19f71fafb44dc36042e0d4b4c4"},
+    {file = "streamlit_navigation_bar-3.3.0-py3-none-any.whl", hash = "sha256:25be9657d7f44c0d4f2759a12bd75de7bb0829ed1dc69d9a5e91a77bc69924d8"},
+]
+
+[package.dependencies]
+st-theme = ">=1.2.3"
+streamlit = ">=1.33.0"
+
+[[package]]
 name = "streamlit-toggle-switch"
 version = "1.0.2"
 description = "Creates a customizable toggle"
@@ -2646,4 +2661,4 @@ files = [
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.11"
-content-hash = "6f93f07ec1b50fbe43c00d2800f19b45003dec680ae0fcb80df5aebb4682e2c4"
+content-hash = "7b5dba77f6a056e2f69ed195260689ae9aeb2aef104d75811614affae0efedb7"

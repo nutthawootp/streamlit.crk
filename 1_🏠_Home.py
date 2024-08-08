@@ -1,9 +1,10 @@
 import streamlit as st
+from streamlit_extras.add_vertical_space import add_vertical_space 
 
 # -- Set page config
 apptitle = 'Cookie Run Kingdom: Guild Leaderboard'
 st.set_page_config(page_title=apptitle
-                    , page_icon=r"images/grandmaster_1.png"
+                    , page_icon=r"images/grandmaster_1.'GIF'"
                     , layout="wide"
                     ,initial_sidebar_state="auto"
                     ,menu_items={                        
@@ -20,40 +21,63 @@ def main():
 
 # -- Sidebar
 def cs_sidebar(): 
-    # st.sidebar.header('Developed and Maintained by **SantaMonica @ MolochTH**')
-    st.sidebar.image(r'images/molochth_logo_15transparent.png',use_column_width=True,width=244)
+    st.sidebar.markdown('<small>Developed and Maintained by **SantaMonica @ MolochTH**</small>', unsafe_allow_html=True)
+    # st.sidebar.image(r'images/molochth_logo_15transparent.png',use_column_width=True)
     
     
     
     # -- Body        
 def cs_body():              
-    st.title(body=':orange[Cookie Run: Kingdom]🏰')
-    st.subheader('Dark Cacao server\'s Guild Battle Leaderboard',divider='gray')
-    st.markdown("""
-### :blue[**Welcome!**] 👋
+    st.title(body='⚔️Guild Battle Leaderboard')
+    st.subheader(':orange[🏰Cookie Run: Kingdom\'s Dark Cacao server🍫] ',divider='gray')
+    
+    col1, col2 = st.columns([3.5,1.5])
+    
+    with col1:
+        text_col = st.container()
+        text_col.write("""
+### :blue[ **Welcome!** 👑 ] 
 
-Check out this demo app that highlights the guild boss battle performances of the top guilds on the Cookie Run: Kingdom's dark cacao server. 
-I manually collect the data from the game each week. Originally made for my guild, **_MolochTH_**. It's meant for internal use, 
-but feel free to share it if you think others might find it handy! 
+Hey there👋, check out this demo app we've put together. It's a handy tracker for the guild battle  how the top guilds are doing in Cookie Run: Kingdom's Dark Cacao server. We update the stats every week, straight from the game.🎮
 
-👈 **Check them out by browsing the pages in the sidebar!**
-                """) 
+Originally, It was just for our crew at **MolochTH** to check out our own stats and to see how we stack up against the competition and figure out ways to boost our game.📈 But hey, if you think it's handy for your guild too, feel free to use it.❤️🍪
+
+        """) 
+    with col2:
+        with st.container():
+            add_vertical_space(4)
+            st.image(r'images\molochth_logo_diffused_edge.png',use_column_width=True,caption=None,)
+            add_vertical_space(2)
+    
+    st.write("👈 **Check them out by browsing the pages in the sidebar!**")
     st.divider()
     
-    with st.expander("❓:blue[Tell me more about Cookie Run: Kingdom & Guild battle]"):
+    
+    with st.expander("💡:blue[Tell me more about **guild battle** in the] :orange[Cookie Run: Kingdom]⚔️"):
         st.subheader('Cookie Run: Kingdom & Guild battle',divider='gray')                     
         st.markdown(body="""        
-        [:orange[**Cookie Run: Kingdom**]](https://www.cookierun-kingdom.com/en/) is a free-to-play game by [:orange[Devsisters]](https://devsisters.com) that mixes action RPG, gacha, and city-building. Players build their own Cookie Kingdom, collect Cookies, and battle in different modes. It launched on Android and iOS in January 2021, and on PC via Google Play Games in July 2023.
+        [:orange[**Cookie Run: Kingdom**]](https://www.cookierun-kingdom.com/en/) is a free-to-play game by [:orange[***Devsisters***]](https://devsisters.com) that mixes action RPG, gacha, and city-building. Players build their own Cookie Kingdom, collect Cookies, and battle in different modes. It launched on Android and iOS in ***January 2021***, and on PC via Google Play Games in ***July 2023***.
         """)           
         st.image(image=r'images/guildboss_page.png',use_column_width=True,caption="Guild Battle Mode",)
 
         st.markdown("""
         #### :violet[Guild Battle]⚔️
 
-        Guild Battle is a permanent, seasonal game mode, consists of three individual bosses: :red[Red Velvet Dragon], :violet[Avatar of Destiny], and :green[Living Abyss]. 
+        Guild Battle is a permanent, seasonal game mode, consists of three individual bosses: 
+        :red[**Red Velvet Dragon**]🐲, :red[**Avatar of Destiny**]🔮, and :red[**Living Abyss**]🌌. 
         Each boss has individual skills, strengths and weaknesses, and strategies needed to defeat them. Damage inflicted on any of the bosses is shared between all 30 guild members, 
         allowing all members to contribute towards the same goals and rewards.
-
+        """)
+        
+        boss1, boss2, boss3 = st.columns(3)
+        with boss1:
+            st.image(image=r'images/rv-dragon-idle.webp',use_column_width=True,caption="Red Velvet Dragon",output_format='PNG')
+        with boss2:
+            st.image(image=r'images/av_destiny_idle.webp',use_column_width=True,caption="Avatar of Destiny",output_format='PNG')
+        with boss3:
+            st.image(image=r'images/abyss_idle.webp',use_column_width=True,caption="Living Abyss",output_format='PNG')
+        
+        st.markdown("""
         #### :violet[Seasons & Rounds]📅
 
         Each Guild Battle season consist of 4 rounds, one per week, for a total of 24 playable days and 4 tallying days. 

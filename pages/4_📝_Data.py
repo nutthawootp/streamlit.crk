@@ -11,7 +11,7 @@ st.set_page_config(
     page_icon="📝",
     layout="wide",
     initial_sidebar_state="auto",
-    menu_items={"About": "Developed and Maintained by **SantaMonica @ MolochTH**"},
+    menu_items={"About": "Developed and Maintained by **SantaMonica**"},
 )
 st.logo(image=r"images/grandmaster_1.png",icon_image=r"images/grandmaster_1.png")
 def main():

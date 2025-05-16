@@ -22,7 +22,7 @@ def main():
 
 # -- Sidebar
 def cs_sidebar(): 
-    st.sidebar.markdown('<small>Developed and Maintained by **SantaMonica @ MolochTH**</small>', unsafe_allow_html=True)
+    st.sidebar.markdown('<small>Developed and Maintained by **SantaMonica**</small>', unsafe_allow_html=True)
     # st.sidebar.image(r'images/molochth_logo_15transparent.png',use_column_width=True,width=244)
 
     

@@ -29,24 +29,5 @@
 
 - **Spy Gear for Players**: Not in the guild? No worries! Sneak a peek at the leaderboard for some top-secret competitive insights. 🕵️‍♂️🔍
 
-### 🎉 **Get Started** 🎉
-
-1. Join the adventure:
-
-```
-git clone https://github.com/nutthawootp/streamlit.crk.git
-```
-
-2. Gather your tools:
-
-```
-pip install -r requirements.txt
-```
-
-3. Launch the magic portal:
-
-```
-streamlit run app.py
-```
 
 ---

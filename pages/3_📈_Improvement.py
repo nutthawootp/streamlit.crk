@@ -24,7 +24,7 @@ def main():
 
 # -- Sidebar
 def cs_sidebar() -> None: 
-    st.sidebar.markdown('<small>Developed and Maintained by **SantaMonica @ MolochTH**</small>', unsafe_allow_html=True)
+    st.sidebar.markdown('<small>Developed and Maintained by **SantaMonica**</small>', unsafe_allow_html=True)
     # st.sidebar.image(r'images/molochth_logo_15transparent.png',use_column_width=True,width=244)
     return None
 
@@ -35,6 +35,7 @@ def cs_body() -> None:
     st.subheader('Improvement of guilds over time')
     st.divider()  # 👈 Another horizontal rule
     @st.cache_data
+    
     def load_data() -> pd.DataFrame:
         csv_data_path = 'https://raw.githubusercontent.com/nutthawootp/CRK_guild_boss/main/data/CRK_guild_boss.csv'
         data = pd.read_csv(csv_data_path)

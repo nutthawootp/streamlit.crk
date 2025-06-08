@@ -12,8 +12,9 @@ st.set_page_config(
     page_icon="📈",
     layout="wide",
     initial_sidebar_state="auto",
-    menu_items={"About": "Developed and Maintained by **SantaMonica @ MolochTH**"}
-)
+    menu_items={
+            'About': "Developed and Maintained by :orange[**SantaMΦnica**]"
+        })
 st.logo(r"images/grandmaster_1.png",icon_image=r"images/grandmaster_1.png")
 
 
@@ -24,7 +25,7 @@ def main():
 
 # -- Sidebar
 def cs_sidebar() -> None: 
-    st.sidebar.markdown('<small>Developed and Maintained by **SantaMonica**</small>', unsafe_allow_html=True)
+    st.sidebar.markdown('<small>Developed and Maintained by :orange[**SantaMΦnica**]</small>', unsafe_allow_html=True)
     # st.sidebar.image(r'images/molochth_logo_15transparent.png',use_column_width=True,width=244)
     return None
 

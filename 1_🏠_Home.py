@@ -19,9 +19,6 @@ try:
 except Exception as e:
     st.error(f"Error setting up the page: {e}")
 
-def main():
-    cs_sidebar()
-    cs_body()
 
 # -- Sidebar
 def cs_sidebar(): 
@@ -43,7 +40,7 @@ Originally, it was just for our crew at **MolochTH** to check our own stats and 
 
     with col2:
         add_vertical_space(4)
-        st.image(r'images/molochth_logo_diffused_edge.png', use_column_width=True,  )
+        st.image(r'images/molochth_logo_diffused_edge.png', use_container_width=True,  )
         add_vertical_space(2)
     
     st.write("👈 **Check them out by browsing the pages in the sidebar!**")
@@ -58,7 +55,7 @@ Originally, it was just for our crew at **MolochTH** to check our own stats and 
         [:orange[**Cookie Run: Kingdom**]](https://www.cookierun-kingdom.com/en/) is a free-to-play game by [:orange[***Devsisters***]](https://devsisters.com) that mixes action RPG, gacha, and city-building. Players build their own Cookie Kingdom, collect Cookies, and battle in different modes. It launched on Android and iOS in ***January 2021***, and on PC via Google Play Games in ***July 2023***.
         """)           
         
-        st.image(r'images/guildboss_page.png', use_column_width=True, caption="Guild Battle Mode")
+        st.image(r'images/guildboss_page.png', use_container_width=True, caption="Guild Battle Mode")
         
         st.markdown("""#### :violet[Guild Battle]⚔️
 Guild Battle is a permanent, seasonal game mode consisting of three individual bosses: 
@@ -75,7 +72,7 @@ Each boss has individual skills, strengths, weaknesses, and strategies needed to
             ]
             try:
                 for image, caption in boss_images:
-                    st.image(image=image, use_column_width=True, caption=caption, output_format='PNG')
+                    st.image(image=image, use_container_width=True, caption=caption, output_format='PNG')
             except Exception as e:
                 st.error(f"Error loading boss images: {e}")
 
@@ -88,7 +85,7 @@ Each boss has individual skills, strengths, weaknesses, and strategies needed to
         ]):
             try:
                 with col:
-                    st.image(image=image, use_column_width=True, caption=caption, output_format='PNG')
+                    st.image(image=image, use_container_width=True, caption=caption, output_format='PNG')
             except Exception as e:
                 st.error(f"Error loading image '{caption}': {e}")
 
@@ -107,7 +104,7 @@ Each Guild Battle season consists of 4 rounds, one per week, for a total of 24 p
     unsafe_allow_html=True
             )
         
-        st.image(r'images/guildboss_rotation.png', use_column_width=True, caption="Guild Boss Rotation")
+        st.image(r'images/guildboss_rotation.png', use_container_width=True, caption="Guild Boss Rotation")
         
         
         st.markdown("""#### :violet[Guild Trophies]🏆
@@ -121,13 +118,17 @@ After each tallying day, guilds receive rewards based on their ranking. Higher-r
         """)
         
     # Hide Streamlit footer and main menu
-    hide_streamlit_style = """
-    <style>
-    #MainMenu {visibility: hidden;}
-    footer {visibility: hidden;}
-    </style>
-    """
-    st.markdown(hide_streamlit_style, unsafe_allow_html=True)
+    # hide_streamlit_style = """
+    # <style>
+    # #MainMenu {visibility: hidden;}
+    # footer {visibility: hidden;}
+    # </style>
+    # """
+    # st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 
+def main():
+    cs_sidebar()
+    cs_body()
+    
 if __name__ == '__main__':
     main()
